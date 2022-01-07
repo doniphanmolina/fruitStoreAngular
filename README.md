@@ -1,0 +1,18 @@
+# CatsManagement
+A cat-lady cats management. 
+Do not put any single kitty in danger.
+
+LIVE DEMO: http://cats.doniphanmolina.com 
+
+This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 13.1.2.
+# Local running
+
+	1. Install NODEjs on your system. For further instructions how to do so, go to https://nodejs.org/
+	2. Install [nvm](https://github.com/nvm-sh/nvm). Be sure running $ nvm -version works
+	3. $ nvm install 16
+	4. $ nvm use 16
+	5. We install angular-cli globally: $ npm install -g @angular/cli@10.2.0
+	6. Download the Project and navigate to the root
+	7. $ npm install
+	8. $ ng serve --open 
+	9. Also, there's a live DEMO at http://cats.doniphanmolina.com 

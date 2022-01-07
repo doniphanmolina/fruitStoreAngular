@@ -1,0 +1,15 @@
+.card-actions {
+  position: absolute;
+  top: 25px;
+  right: 5px;
+}
+.mat-card{
+  height: 100%;
+  overflow: hidden;
+}
+.mat-card-content>:first-child{
+  overflow: auto;
+}
+.mat-card-image {
+  width: 100% !important;
+}
