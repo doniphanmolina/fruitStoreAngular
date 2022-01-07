@@ -1,15 +1,15 @@
 import { ActionReducerMap } from '@ngrx/store';
 import * as catsList from './store';
 
-const CATS_STORE = 'catsStore';
-const CAT_STORE = 'catStore';
+const FRUITS_STORE = 'fruitsStore';
+const FRUIT_STORE = 'fruitStore';
 
 export interface AppState {
-  [CATS_STORE]: catsList.State;
-  [CAT_STORE]: catsList.CatState;
+  [FRUITS_STORE]: catsList.State;
+  [FRUIT_STORE]: catsList.CatState;
 }
 
 export const reducers: ActionReducerMap<AppState> = {
-  [CATS_STORE]: catsList.catsListReducer,
-  [CAT_STORE]: catsList.selectedCatReducer
+  [FRUITS_STORE]: catsList.catsListReducer,
+  [FRUIT_STORE]: catsList.selectedCatReducer
 };

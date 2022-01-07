@@ -1,13 +1,13 @@
 import * as CatActions from './cats.actions'
-import { Cat } from "../cat.model";
+import {Cat, Container, Fruit, Shelf} from "../cat.model";
 import { createReducer, on } from '@ngrx/store';
 import * as _ from 'lodash';
 import {AppState} from "../app.reducers";
 
 export interface State {
   catsList: {
-    cats: Cat[],
-    catCount: number;
+    fruits: Fruit[],
+    shelves: Shelf[]
   }
 }
 
@@ -17,9 +17,8 @@ export interface CatState {
 
 export const initialState: State = {
   catsList: {
-    cats: [
-    ],
-    catCount: 0
+      fruits: [],
+      shelves: []
   },
 
 };
@@ -45,22 +44,23 @@ export const catsListReducer = createReducer(
     return _.setWith(_.clone(state), 'cats', updatedCats, _.clone);
     })
   ,
-  on(CatActions.SetCats, (state, action) => {
-    const updatedCats = {
-      cats: [
-        ...action.cats
-      ],
-      catCount: action.cats.length
-  };
-
-    return _.setWith(_.clone(state), 'catsList', updatedCats, _.clone);
-
-    // return _.clone(state);
-    // return _.setWith(_.clone(state), 'cats', cats, _.clone);
+  on(CatActions.SetShelves, (state, action) => {
+      console.log(action)
+    const updatedShelves =  [
+            ...action.shelves
+          ];
+    return _.setWith(_.clone(state), 'catsList.shelves', updatedShelves, _.clone);
   }),
+    on(CatActions.SetFruits, (state, action) => {
+        console.log(action)
+        const updatedFruits =  [
+                ...action.fruits
+            ];
+        return _.setWith(_.clone(state), 'catsList.fruits', updatedFruits, _.clone);
+    }),
 
   on(CatActions.UpdateCat, (state, action) => {
-    const updatedCats = [...state.catsList.cats];
+    const updatedCats = [...state.catsList.shelves];
 
     // for(var i in state.cats) {
     //   console.log(state.cats[i].id , action.cat.id)

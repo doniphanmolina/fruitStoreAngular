@@ -5,7 +5,7 @@ import { Observable } from 'rxjs';
 
 import { AppState } from './app.reducers';
 import * as CatActions from './store/cats.actions'
-import { Cat } from "./cat.model";
+import {Cat, Fruit, Shelf} from "./cat.model";
 import * as selectors from './store/cats.selectors';
 
 @Injectable({
@@ -19,8 +19,11 @@ export class CatsStoreService {
     this.store.dispatch(CatActions.GetCats());
   }
 
-  public setCats(cats: Cat[]): void {
-    this.store.dispatch(CatActions.SetCats({cats: cats}));
+  public setShelves(shelves: Shelf[]): void {
+    this.store.dispatch(CatActions.SetShelves({shelves: shelves}));
+  }
+  public setFruits(fruits: Fruit[]): void {
+    this.store.dispatch(CatActions.SetFruits({fruits: fruits}));
   }
 
   public updateCat(newCat: Cat): any {
@@ -31,8 +34,12 @@ export class CatsStoreService {
     this.store.dispatch(CatActions.AddCat({cat: newCat}));
   }
 
-  public getCatsList(): Observable<any> {
-    return this.store.pipe(select(selectors.selectCats));
+  public getShelvesList(): Observable<any> {
+    return this.store.pipe(select(selectors.selectShelves));
+  }
+
+  public getContainersList(): Observable<any> {
+    return this.store.pipe(select(selectors.selectContainers));
   }
 
   public getSelectedCat(): Observable<any> {

@@ -24,8 +24,6 @@ import { AddCatDialogComponent } from './add-cat-dialog/add-cat-dialog.component
 import { MaterialModule } from "./material.module";
 import { FormsModule, ReactiveFormsModule} from "@angular/forms";
 import { DeleteCatDialogComponent} from "./delete-cat-dialog/delete-cat-dialog.component";
-import { CatLocationComponent } from './cat-location/cats-location.component/cat-location.component';
-import { CatLocationPage} from "./cat-location/cats-location.page/cat-location.page";
 import { StoreModule } from "@ngrx/store";
 import { reducers } from "./app.reducers";
 import { StoreDevtoolsModule } from '@ngrx/store-devtools';
@@ -42,8 +40,6 @@ import { StoreDevtoolsModule } from '@ngrx/store-devtools';
     HomeComponent,
     AddCatDialogComponent,
     DeleteCatDialogComponent,
-    CatLocationComponent,
-    CatLocationPage
   ],
   imports: [
     BrowserModule,

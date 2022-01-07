@@ -3,31 +3,50 @@
     <div class="header-menu">
       <h2 class="header-link" routerLink="/cats"
           [class]="{'active-link' : router.url === '/cats' || router.url.indexOf('cat') === 1}">
-        My Cats
-      </h2>
-      <h2 class="header-link" routerLink="/locations" routerLinkActive="active-link">
-        Cats Location
+        Fruit Store
       </h2>
     </div>
 
     <br>
 
     <div class="header-tools">
-      <h4 class="text-teal" *ngIf="catListCount"
-          style="display: inline-block; margin-bottom: 0; margin-top: 20px">I'm the proud owner of {{catListCount}} kitties</h4>
       <div class="badge badge-success pull-right">
-        <button mat-button (click)="addCatDialog()">Add New Cat</button>
+          <button mat-button (click)="addCatDialog()">Cart</button>
+        <button mat-button (click)="addCatDialog()">Admin</button>
       </div>
     </div>
   </div>
   <div class="header-items-container" *ngIf="router.url === '/cats' || router.url.indexOf('cat') === 1">
-    <ul class="header-items clearfix">
-      <li *ngFor="let cat of catList" class="header-items-container-item" (click)="gotoCatDetail(cat)">
-        <a [routerLink]="['/cat', cat.id]">
-          <img src="{{cat.imgPath}}" alt="Cat Image" width="150" class="clickable img-responsive"  />
-          <span class="header-cat-name">{{cat.name}}</span>
-        </a>
-      </li>
-    </ul>
+
+    <div class="col-sm-3" *ngFor="let shelf of shelves">
+      <mat-card class="example-card" >
+        <mat-card-header>
+          <!--      <div mat-card-avatar class="example-header-image"></div>-->
+          <mat-card-title>{{shelf.stack}}</mat-card-title>
+          <mat-card-subtitle>Capacity: {{shelf.capacity}}</mat-card-subtitle>
+        </mat-card-header>
+
+        <mat-card-content>
+            <div class="row">
+                <div class="col-sm-8">
+                    <!--          <img mat-card-image src="{{shelf.imgPath}}" alt="{{shelf.name}}" width="450"/>-->
+                </div>
+                <div class="col-sm-4">
+            </div>
+
+
+          </div>
+
+        </mat-card-content>
+        <div class="card-actions" style="height: 50px">
+  <!--      <span mat-button class="pull-right edit-icon" (click)="editCatDialog(shelf) ">-->
+  <!--      </span>-->
+  <!--        <span mat-button class="pull-right delete-icon" (click)="deleteCatDialog(selectedCat)">-->
+  <!--      </span>-->
+        </div>
+      </mat-card>
+    </div>
+
+
   </div>
 </div>

@@ -20,21 +20,41 @@ export class CatsService {
 
   fetchCats(): void {
     this.firestore
-      .collection('cats')
+      .collection('shelves')
       .snapshotChanges()
       .pipe(map(data => {
-          return data.map(cat => {
+          return data.map(shelf => {
             return {
-              id: cat.payload.doc.id,
-              ...cat.payload.doc.data() as {}
+              id: shelf.payload.doc.id,
+              ...shelf.payload.doc.data() as {}
             }
           })
         })
-      ).subscribe((cats: any) => {
-        this.cats = cats;
-        this.catsStoreService.setCats(cats);
+      ).subscribe((shelves: any) => {
+        this.cats = shelves;
+        this.catsStoreService.setShelves(shelves);
         // this.store.dispatch(CatActions.SetCats(cats));
         // this.catsChanged.next([...this.cats])
+    });
+  }
+
+  fetchFruits(): void {
+    this.firestore
+        .collection('frutas')
+        .snapshotChanges()
+        .pipe(map(data => {
+              return data.map(fruit => {
+                return {
+                  id: fruit.payload.doc.id,
+                  ...fruit.payload.doc.data() as {}
+                }
+              })
+            })
+        ).subscribe((fruits: any) => {
+      this.cats = fruits;
+      this.catsStoreService.setFruits(fruits);
+      // this.store.dispatch(CatActions.SetCats(cats));
+      // this.catsChanged.next([...this.cats])
     });
   }
 

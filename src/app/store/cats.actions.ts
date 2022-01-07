@@ -1,9 +1,10 @@
-import { Cat } from "../cat.model";
+import {Cat, Fruit, Shelf} from "../cat.model";
 import { createAction, props } from '@ngrx/store';
 import * as _ from 'lodash';
 
 export const GET_CATS = 'GET_CATS';
-export const SET_CATS = 'SET_CATS';
+export const SET_SHELVES = 'SET_SHELVES';
+export const SET_FRUITS = 'SET_FRUITS';
 export const ADD_CAT = 'ADD_CAT';
 export const UPDATE_CAT = 'UPDATE_CAT';
 export const DELETE_CAT = 'DELETE_CAT';
@@ -13,7 +14,9 @@ export const DELETE_ERROR = 'Delete Error';
 
 export const GetCats = createAction(GET_CATS);
 
-export const SetCats = createAction(SET_CATS, props<{ cats: Cat[]}>());
+export const SetShelves = createAction(SET_SHELVES, props<{ shelves: Shelf[]}>());
+
+export const SetFruits = createAction(SET_FRUITS, props<{ fruits: Fruit[]}>());
 
 export const AddCat = createAction(ADD_CAT, props<{ cat: Cat, callback?: () => void }>());
 

@@ -1,5 +1,6 @@
 import { Component, OnDestroy, OnInit } from '@angular/core';
 import { Cat } from "../../cat.model";
+import { Shelf } from "../../cat.model";
 import { AngularFirestore } from "@angular/fire/compat/firestore";
 import { CatsService } from "../../cats.service";
 import { MatDialog } from "@angular/material/dialog";
@@ -17,23 +18,25 @@ import { Observable } from "rxjs";
 })
 export class HeaderPage implements OnInit, OnDestroy {
 
-  cats: Cat[] = [];
+  shelves: Shelf[] = [];
   catsNumber: number = 0;
   catsSubscription: Subscription;
-  catList$: Observable<any>;
+  shelvesList$: Observable<any>;
+  containersList$: Observable<any>;
 
   constructor(private firestore: AngularFirestore,
               private catsService: CatsService,
               private router: Router,
-              private store: Store<{catsList: { cats: Cat[] }}>,
+              private store: Store<{catsList: { shelves: Shelf[] }}>,
               private catsStoreService: CatsStoreService,
               public dialog: MatDialog) { }
 
   ngOnInit(): void {
     this.catsService.fetchCats();
+    this.catsService.fetchFruits();
     this.catsStoreService.getCats();
-    this.catList$ = this.catsStoreService.getCatsList();
-
+    this.shelvesList$ = this.catsStoreService.getShelvesList();
+    this.containersList$ = this.catsStoreService.getContainersList();
   }
 
   addCatDialog() {

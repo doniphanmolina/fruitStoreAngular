@@ -16,3 +16,27 @@ export interface Marker {
   label?: string;
   draggable: boolean;
 }
+
+export interface Fruit {
+  type: string;
+  name: string;
+  price: number;
+  quantity: number
+}
+
+export interface Container{
+  capacity: number;
+  type: string;
+  filling: number;
+  fruits: Fruit,
+  id: string
+}
+
+export interface Shelf {
+  stack: number;
+  filling: number;
+  capacity: number;
+  containers: Array<Container>;
+  id: string;
+  title: string;
+}
