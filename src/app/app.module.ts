@@ -10,20 +10,15 @@ import { provideDatabase,getDatabase } from '@angular/fire/database';
 import { provideFirestore,getFirestore } from '@angular/fire/firestore';
 import { provideStorage,getStorage } from '@angular/fire/storage';
 import { AgmCoreModule } from '@agm/core';
-import { CatsListComponent } from './cats-list/cats-list-component/cats-list.component';
-import { CatsListPage } from "./cats-list/cats-list.page/cats-list.page";
-import { HeaderComponent } from './header/component/header.component';
-import { HeaderPage } from "./header/page/header.page";
-import { CatDetailComponent } from './cat-detail/cat-detail.component/cat-detail.component';
-import { CatDetailPage } from './cat-detail/cat-detail.page/cat-detail.page';
+import { FrontstoreComponent } from './frontStore/component/frontstore.component';
+import { FrontstorePage } from "./frontStore/page/frontstore.page";
 import { HomeComponent } from './home/home.component';
 import { AngularFirestore } from "@angular/fire/compat/firestore";
 import { AngularFireModule } from "@angular/fire/compat";
-import { CatsService } from "./cats.service";
-import { AddCatDialogComponent } from './add-cat-dialog/add-cat-dialog.component';
+import { FruitstoreService } from "./fruitstore.service";
+import { AdminDialogComponent } from './add-cat-dialog/admin-dialog.component';
 import { MaterialModule } from "./material.module";
 import { FormsModule, ReactiveFormsModule} from "@angular/forms";
-import { DeleteCatDialogComponent} from "./delete-cat-dialog/delete-cat-dialog.component";
 import { StoreModule } from "@ngrx/store";
 import { reducers } from "./app.reducers";
 import { StoreDevtoolsModule } from '@ngrx/store-devtools';
@@ -31,15 +26,10 @@ import { StoreDevtoolsModule } from '@ngrx/store-devtools';
 @NgModule({
   declarations: [
     AppComponent,
-    CatsListComponent,
-    CatsListPage,
-    HeaderComponent,
-    HeaderPage,
-    CatDetailComponent,
-    CatDetailPage,
+    FrontstoreComponent,
+    FrontstorePage,
     HomeComponent,
-    AddCatDialogComponent,
-    DeleteCatDialogComponent,
+    AdminDialogComponent,
   ],
   imports: [
     BrowserModule,
@@ -64,7 +54,7 @@ import { StoreDevtoolsModule } from '@ngrx/store-devtools';
       apiKey: 'AIzaSyC6uuu9_wvrn3DpMy-Yt2P1ZY9OM9vF-qM'
     })
   ],
-  providers: [AngularFirestore,CatsService],
+  providers: [AngularFirestore,FruitstoreService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

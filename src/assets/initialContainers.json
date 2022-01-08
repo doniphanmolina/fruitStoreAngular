@@ -1,0 +1,521 @@
+{
+  "fruitsStore": {
+    "frontStore": {
+      "containers": [
+        {
+          "capacity": 24,
+          "type": 2,
+          "filling": 0,
+          "fruits": [
+            {
+              "type": 2,
+              "name": "Red Delicious Apple",
+              "price": 3
+            },
+            {
+              "type": 2,
+              "name": "Red Delicious Apple",
+              "price": 3
+            },
+            {
+              "type": 2,
+              "name": "Red Delicious Apple",
+              "price": 3
+            },
+            {
+              "type": 2,
+              "name": "Red Delicious Apple",
+              "price": 3
+            },
+            {
+              "type": 2,
+              "name": "Red Delicious Apple",
+              "price": 3
+            },
+            {
+              "type": 2,
+              "name": "Red Delicious Apple",
+              "price": 3
+            },
+            {
+              "type": 2,
+              "name": "Red Delicious Apple",
+              "price": 3
+            },
+            {
+              "type": 2,
+              "name": "Red Delicious Apple",
+              "price": 3
+            },
+            {
+              "type": 2,
+              "name": "Red Delicious Apple",
+              "price": 3
+            },
+            {
+              "type": 2,
+              "name": "Red Delicious Apple",
+              "price": 3
+            },
+            {
+              "type": 2,
+              "name": "Red Delicious Apple",
+              "price": 3
+            },
+            {
+              "type": 2,
+              "name": "Red Delicious Apple",
+              "price": 3
+            },
+            {
+              "type": 2,
+              "name": "Red Delicious Apple",
+              "price": 3
+            },
+            {
+              "type": 2,
+              "name": "Red Delicious Apple",
+              "price": 3
+            },
+            {
+              "type": 2,
+              "name": "Red Delicious Apple",
+              "price": 3
+            },
+            {
+              "type": 2,
+              "name": "Red Delicious Apple",
+              "price": 3
+            },
+            {
+              "type": 2,
+              "name": "Red Delicious Apple",
+              "price": 3
+            },
+            {
+              "type": 2,
+              "name": "Red Delicious Apple",
+              "price": 3
+            },
+            {
+              "type": 2,
+              "name": "Red Delicious Apple",
+              "price": 3
+            },
+            {
+              "type": 2,
+              "name": "Red Delicious Apple",
+              "price": 3
+            },
+            {
+              "type": 2,
+              "name": "Red Delicious Apple",
+              "price": 3
+            },
+            {
+              "type": 2,
+              "name": "Red Delicious Apple",
+              "price": 3
+            },
+            {
+              "type": 2,
+              "name": "Red Delicious Apple",
+              "price": 3
+            },
+            {
+              "type": 2,
+              "name": "Red Delicious Apple",
+              "price": 3
+            }
+          ],
+          "price": 3
+        },
+        {
+          "capacity": 24,
+          "type": 2,
+          "filling": 0,
+          "fruits": [
+            {
+              "type": 2,
+              "name": "Red Delicious Apple",
+              "price": 3
+            },
+            {
+              "type": 2,
+              "name": "Red Delicious Apple",
+              "price": 3
+            },
+            {
+              "type": 2,
+              "name": "Red Delicious Apple",
+              "price": 3
+            },
+            {
+              "type": 2,
+              "name": "Red Delicious Apple",
+              "price": 3
+            },
+            {
+              "type": 2,
+              "name": "Red Delicious Apple",
+              "price": 3
+            },
+            {
+              "type": 2,
+              "name": "Red Delicious Apple",
+              "price": 3
+            },
+            {
+              "type": 2,
+              "name": "Red Delicious Apple",
+              "price": 3
+            },
+            {
+              "type": 2,
+              "name": "Red Delicious Apple",
+              "price": 3
+            },
+            {
+              "type": 2,
+              "name": "Red Delicious Apple",
+              "price": 3
+            },
+            {
+              "type": 2,
+              "name": "Red Delicious Apple",
+              "price": 3
+            },
+            {
+              "type": 2,
+              "name": "Red Delicious Apple",
+              "price": 3
+            },
+            {
+              "type": 2,
+              "name": "Red Delicious Apple",
+              "price": 3
+            },
+            {
+              "type": 2,
+              "name": "Red Delicious Apple",
+              "price": 3
+            },
+            {
+              "type": 2,
+              "name": "Red Delicious Apple",
+              "price": 3
+            },
+            {
+              "type": 2,
+              "name": "Red Delicious Apple",
+              "price": 3
+            },
+            {
+              "type": 2,
+              "name": "Red Delicious Apple",
+              "price": 3
+            },
+            {
+              "type": 2,
+              "name": "Red Delicious Apple",
+              "price": 3
+            },
+            {
+              "type": 2,
+              "name": "Red Delicious Apple",
+              "price": 3
+            },
+            {
+              "type": 2,
+              "name": "Red Delicious Apple",
+              "price": 3
+            },
+            {
+              "type": 2,
+              "name": "Red Delicious Apple",
+              "price": 3
+            },
+            {
+              "type": 2,
+              "name": "Red Delicious Apple",
+              "price": 3
+            },
+            {
+              "type": 2,
+              "name": "Red Delicious Apple",
+              "price": 3
+            },
+            {
+              "type": 2,
+              "name": "Red Delicious Apple",
+              "price": 3
+            },
+            {
+              "type": 2,
+              "name": "Red Delicious Apple",
+              "price": 3
+            }
+          ],
+          "price": 3
+        },
+        {
+          "capacity": 24,
+          "type": 1,
+          "filling": 0,
+          "fruits": [
+            {
+              "type": 1,
+              "name": "Valencia Orange",
+              "price": 3
+            },
+            {
+              "type": 1,
+              "name": "Valencia Orange",
+              "price": 3
+            },
+            {
+              "type": 1,
+              "name": "Valencia Orange",
+              "price": 3
+            },
+            {
+              "type": 1,
+              "name": "Valencia Orange",
+              "price": 3
+            },
+            {
+              "type": 1,
+              "name": "Valencia Orange",
+              "price": 3
+            },
+            {
+              "type": 1,
+              "name": "Valencia Orange",
+              "price": 3
+            },
+            {
+              "type": 1,
+              "name": "Valencia Orange",
+              "price": 3
+            },
+            {
+              "type": 1,
+              "name": "Valencia Orange",
+              "price": 3
+            },
+            {
+              "type": 1,
+              "name": "Valencia Orange",
+              "price": 3
+            },
+            {
+              "type": 1,
+              "name": "Valencia Orange",
+              "price": 3
+            },
+            {
+              "type": 1,
+              "name": "Valencia Orange",
+              "price": 3
+            },
+            {
+              "type": 1,
+              "name": "Valencia Orange",
+              "price": 3
+            },
+            {
+              "type": 1,
+              "name": "Valencia Orange",
+              "price": 3
+            },
+            {
+              "type": 1,
+              "name": "Valencia Orange",
+              "price": 3
+            },
+            {
+              "type": 1,
+              "name": "Valencia Orange",
+              "price": 3
+            },
+            {
+              "type": 1,
+              "name": "Valencia Orange",
+              "price": 3
+            },
+            {
+              "type": 1,
+              "name": "Valencia Orange",
+              "price": 3
+            },
+            {
+              "type": 1,
+              "name": "Valencia Orange",
+              "price": 3
+            },
+            {
+              "type": 1,
+              "name": "Valencia Orange",
+              "price": 3
+            },
+            {
+              "type": 1,
+              "name": "Valencia Orange",
+              "price": 3
+            },
+            {
+              "type": 1,
+              "name": "Valencia Orange",
+              "price": 3
+            },
+            {
+              "type": 1,
+              "name": "Valencia Orange",
+              "price": 3
+            },
+            {
+              "type": 1,
+              "name": "Valencia Orange",
+              "price": 3
+            },
+            {
+              "type": 1,
+              "name": "Valencia Orange",
+              "price": 3
+            }
+          ],
+          "price": 3
+        },
+        {
+          "capacity": 24,
+          "type": 1,
+          "filling": 0,
+          "fruits": [
+            {
+              "type": 1,
+              "name": "Valencia Orange",
+              "price": 3
+            },
+            {
+              "type": 1,
+              "name": "Valencia Orange",
+              "price": 3
+            },
+            {
+              "type": 1,
+              "name": "Valencia Orange",
+              "price": 3
+            },
+            {
+              "type": 1,
+              "name": "Valencia Orange",
+              "price": 3
+            },
+            {
+              "type": 1,
+              "name": "Valencia Orange",
+              "price": 3
+            },
+            {
+              "type": 1,
+              "name": "Valencia Orange",
+              "price": 3
+            },
+            {
+              "type": 1,
+              "name": "Valencia Orange",
+              "price": 3
+            },
+            {
+              "type": 1,
+              "name": "Valencia Orange",
+              "price": 3
+            },
+            {
+              "type": 1,
+              "name": "Valencia Orange",
+              "price": 3
+            },
+            {
+              "type": 1,
+              "name": "Valencia Orange",
+              "price": 3
+            },
+            {
+              "type": 1,
+              "name": "Valencia Orange",
+              "price": 3
+            },
+            {
+              "type": 1,
+              "name": "Valencia Orange",
+              "price": 3
+            },
+            {
+              "type": 1,
+              "name": "Valencia Orange",
+              "price": 3
+            },
+            {
+              "type": 1,
+              "name": "Valencia Orange",
+              "price": 3
+            },
+            {
+              "type": 1,
+              "name": "Valencia Orange",
+              "price": 3
+            },
+            {
+              "type": 1,
+              "name": "Valencia Orange",
+              "price": 3
+            },
+            {
+              "type": 1,
+              "name": "Valencia Orange",
+              "price": 3
+            },
+            {
+              "type": 1,
+              "name": "Valencia Orange",
+              "price": 3
+            },
+            {
+              "type": 1,
+              "name": "Valencia Orange",
+              "price": 3
+            },
+            {
+              "type": 1,
+              "name": "Valencia Orange",
+              "price": 3
+            },
+            {
+              "type": 1,
+              "name": "Valencia Orange",
+              "price": 3
+            },
+            {
+              "type": 1,
+              "name": "Valencia Orange",
+              "price": 3
+            },
+            {
+              "type": 1,
+              "name": "Valencia Orange",
+              "price": 3
+            },
+            {
+              "type": 1,
+              "name": "Valencia Orange",
+              "price": 3
+            }
+          ],
+          "price": 3
+        }
+      ],
+      "fruits": []
+    }
+  }
+}

@@ -1,0 +1,85 @@
+<div class="header-items-container" style="margin-top: 10px;">
+  <div class="header-title">
+    <div class="header-menu">
+      <h2 class="header-link">
+        Fruit Store
+      </h2>
+
+    </div>
+
+    <br>
+
+    <div class="header-tools">
+        <button class="btn btn-success pull-right" style="font-size: 14px" (click)="openAdminDialog()">Admin</button>
+      <button class="btn btn-link pull-right" style="cursor: pointer">
+          <mat-icon (click)="refresh()">refresh</mat-icon>
+      </button>
+    </div>
+  </div>
+  <div class="header-items-container">
+      <div class="row">
+          <div class="col-sm-6 col-sm-offset-3">
+              <div class="col-sm-8">
+                  <form class="example-form" [formGroup]="cartForm">
+
+                      <mat-form-field>
+                          <input type="text" matInput placeholder="Fruit Quantity" formControlName="fruitQuantity">
+                          <mat-error align="end">Value must be a number</mat-error>
+                      </mat-form-field>
+                      <button class="btn btn-info" (click)="addToCart()" [disabled]="cartForm.invalid" style="font-size: 16px; margin-left: 10px"> Buy Fruits!
+                      </button>
+                      <span *ngIf="showErrorMessage" class="red-text" style="display: block; font-size: 9px">{{errorMessage}}</span>
+                  </form>
+              </div>
+              <div class="col-sm-2">
+                  <div class="pull-right" style="display: inline-block">
+                      <img src='/assets/images/cart.svg' width='50'/>
+                      <span class="badge badge-large" [class]="fruitsQuantity > 0 ? 'green' : 'red'">{{fruitsQuantity}}</span>
+                  </div>
+              </div>
+              <div class="col-sm-2">
+                  <h1 style="margin-top: 10px">${{totalPrice}}</h1>
+              </div>
+
+          </div>
+      </div>
+      <div class="header-items-container" >
+          <ul class="header-items clearfix">
+              <li *ngFor="let container of containers" class="header-items-container-item">
+                  <mat-card class="example-card">
+                      <mat-card-header>
+                          <!--      <div mat-card-avatar class="example-frontStore-image"></div>-->
+                          <mat-card-title>Fresh {{container.type === 1 ? "Oranges" : "Apples"}}</mat-card-title>
+                          <mat-card-subtitle>{{container.type === 1 ? "Handpicked for best taste" : "Handled with extra care"}}</mat-card-subtitle>
+                      </mat-card-header>
+
+                      <mat-card-content>
+                          <div class="row" style="padding: 15px 0; width: 220px">
+                              <div class="sold sold-container" *ngIf="container.fruits?.length === 0 "><span class="sold-rotate">Sold</span></div>
+                              <div class="col-sm-8">
+                                  <span>{{container.fruits[0]?.name}}s</span><br>
+
+                              </div>
+                              <div class="col-sm-4" style="margin-bottom: 5px">
+                                  <div className="fruit-icon" >
+                                      <img src='{{container.type === 1 ? "/assets/images/orange.svg" : "/assets/images/apple.svg"}}' width='50'/>
+                                      <span class="badge badge-small" [class]="container.fruits?.length > 0 ? 'green' : 'red'">{{container.fruits?.length}}</span>
+                                  </div>
+                              </div>
+                              <mat-divider  [inset]="true"></mat-divider>
+                          </div>
+
+
+                      </mat-card-content>
+                      <div class="card-actions" style="height: 10px">
+                          <img src="/assets/images/price-tag.png" class="price-tag">
+
+                          <span class="fruit-price">${{container.price}} / each</span>
+                      </div>
+                  </mat-card>
+              </li>
+          </ul>
+      </div>
+
+  </div>
+</div>

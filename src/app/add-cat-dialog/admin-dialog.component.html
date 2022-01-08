@@ -1,0 +1,50 @@
+
+<section>
+  <h4 >Here you can set your Fruit Shop initial amount of containers</h4>
+  <form [formGroup]="frontstoreForm">
+        <div class="col-sm-6" style="margin-top: 20px">
+          <mat-form-field>
+            <input type="text" matInput required placeholder="Orange Containers" formControlName="orangeContainers">
+            <mat-error align="end">{{errorMessage}}</mat-error>
+          </mat-form-field>
+        </div>
+        <div class="col-sm-6" style="margin-top: 20px">
+          <mat-form-field>
+            <input type="text" matInput placeholder="Oranges per Container" formControlName="orangeContainersCapacity">
+            <mat-error align="end">{{errorMessage}}</mat-error>
+          </mat-form-field>
+        </div>
+
+
+
+      <div class="col-sm-6" style="margin-top: 20px">
+        <mat-form-field>
+          <input type="text" matInput placeholder="Apple Containers" formControlName="appleContainers">
+          <mat-error align="end">{{errorMessage}}</mat-error>
+        </mat-form-field>
+      </div>
+      <div class="col-sm-6" style="margin-top: 20px">
+        <mat-form-field>
+          <input type="text" matInput placeholder="Apples per Container" formControlName="appleContainersCapacity">
+          <mat-error align="end">{{errorMessage}}</mat-error>
+        </mat-form-field>
+
+         </div>
+      <div class="col-sm-6 col-sm-offset-3" style="margin-top: 20px">
+          <mat-form-field>
+              <input type="text" matInput placeholder="Fruit Price" formControlName="fruitPrice">
+              <span matPrefix>$&nbsp;</span>
+              <mat-error align="end">{{errorMessage}}</mat-error>
+          </mat-form-field>
+      </div>
+
+
+      <div class="col-sm-12" style="margin-top: 70px">
+          <button mat-button (click)="closeDialog()">Close</button>
+          <button type="submit" mat-raised-button color="primary" (click)="updateStore()"
+                  class="pull-right"  [disabled]="frontstoreForm.invalid">Init Shop</button>
+      </div>
+
+  </form>
+</section>
+

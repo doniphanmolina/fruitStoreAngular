@@ -8,6 +8,9 @@ import {MatCardModule} from "@angular/material/card";
 import {MatDatepicker, MatDatepickerModule} from "@angular/material/datepicker";
 import {MatNativeDateModule} from "@angular/material/core";
 import { MatRadioModule} from "@angular/material/radio";
+import {MatBadgeModule} from "@angular/material/badge";
+import {MatDividerModule} from "@angular/material/divider";
+import {MatListModule} from "@angular/material/list";
 
 @NgModule({
   declarations: [
@@ -22,7 +25,10 @@ import { MatRadioModule} from "@angular/material/radio";
     MatCardModule,
     MatDatepickerModule,
     MatNativeDateModule,
-    MatRadioModule
+    MatRadioModule,
+      MatBadgeModule,
+      MatDividerModule,
+      MatListModule
   ],
   exports: [
     MatDialogModule,
@@ -33,7 +39,10 @@ import { MatRadioModule} from "@angular/material/radio";
     MatCardModule,
     MatDatepickerModule,
     MatNativeDateModule,
-    MatRadioModule
+    MatRadioModule,
+      MatBadgeModule,
+      MatDividerModule,
+      MatListModule
   ],
   providers: [MatDatepicker]
 }

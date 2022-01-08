@@ -23,7 +23,10 @@
     "lib": [
       "es2020",
       "dom"
-    ]
+    ],
+    "resolveJsonModule": true, //already there
+    "esModuleInterop": true,
+    "allowSyntheticDefaultImports": true // Add this line
   },
   "angularCompilerOptions": {
     "enableI18nLegacyMessageIdFormat": false,
