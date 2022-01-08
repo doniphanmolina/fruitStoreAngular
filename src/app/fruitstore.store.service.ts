@@ -15,9 +15,6 @@ import * as selectors from './store/selectors';
 export class FruitstoreStoreService {
   constructor(private store: Store<AppState>) {}
 
-  public getCats(): any {
-    this.store.dispatch(FruitStoreActions.GetCats());
-  }
 
   public setContainers(containers: any[]): void {
     this.store.dispatch(FruitStoreActions.SetContainers({containers: containers}));
@@ -26,14 +23,6 @@ export class FruitstoreStoreService {
     this.store.dispatch(FruitStoreActions.SetFruits({fruits: fruits}));
   }
 
-  // public updateCat(newCat: Cat): any {
-  //   this.store.dispatch(CatActions.UpdateCat({cat: newCat}));
-  // }
-  //
-  // public addCat(newCat: Cat): any {
-  //   this.store.dispatch(CatActions.AddCat({cat: newCat}));
-  // }
-
   public getContainersList(): Observable<any> {
     return this.store.pipe(select(selectors.selectContainers));
   }
@@ -41,11 +30,5 @@ export class FruitstoreStoreService {
   public getFruitsList(): Observable<any> {
     return this.store.pipe(select(selectors.selectFruits));
   }
-
-  public getSelectedCat(): Observable<any> {
-    return this.store.pipe(select(selectors.getSelectedCat));
-  }
-
-  // public setSelectedCat(cat: Cat): void {Å
 
 }

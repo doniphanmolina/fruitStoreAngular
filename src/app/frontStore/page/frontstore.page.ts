@@ -17,29 +17,20 @@ import { Observable } from "rxjs";
 })
 export class FrontstorePage implements OnInit, OnDestroy {
 
-  catsNumber: number = 0;
-  catsSubscription: Subscription;
   containersList$: Observable<any>;
   fruitsList$: Observable<any>;
 
   constructor(private firestore: AngularFirestore,
-              private catsService: FruitstoreService,
               private router: Router,
               private store: Store<{frontStore: { containers: Container[] }}>,
               private fruitstoreStoreService: FruitstoreStoreService,
               public dialog: MatDialog) { }
 
   ngOnInit(): void {
-    this.fruitstoreStoreService.getCats();
     this.containersList$ = this.fruitstoreStoreService.getContainersList();
     this.fruitsList$ = this.fruitstoreStoreService.getFruitsList();
   }
 
-  addCatDialog() {
-    this.dialog.open(AdminDialogComponent, {
-      data: {editMode: false}
-    });
-  }
 
   ngOnDestroy(): void {
   }

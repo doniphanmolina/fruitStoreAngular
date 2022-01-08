@@ -6,7 +6,6 @@ import {Subject} from "rxjs";
 import {Observable, of} from "rxjs";
 import { Store } from "@ngrx/store";
 import { State } from "./store/reducers"
-import * as CatActions from './store/actions'
 import {FruitstoreStoreService} from "./fruitstore.store.service";
 import InitialContainers from '../assets/initialContainers.json';
 

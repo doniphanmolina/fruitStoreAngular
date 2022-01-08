@@ -16,7 +16,7 @@ import {FruitstoreStoreService} from "../fruitstore.store.service";
 import {FruitstoreService} from "../fruitstore.service";
 
 @Component({
-  selector: 'app-add-cat-dialog',
+  selector: 'app-admin-dialog',
   templateUrl: './admin-dialog.component.html',
   styleUrls: ['./admin-dialog.component.scss']
 })
@@ -57,7 +57,6 @@ export class AdminDialogComponent implements OnInit {
 
   updateStore(): void {
     const newStore = this.buildStore();
-    // this.containerDoc.update(editedCat).then(r => console.log('Success'));
     this.fruitStoreService.initData(newStore);
     this.closeDialog();
   }

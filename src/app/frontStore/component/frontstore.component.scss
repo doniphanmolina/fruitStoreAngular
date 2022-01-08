@@ -47,29 +47,7 @@
     padding: 10px;
     text-align: center;
   }
-  &-cat-name{
-    color: #495057;
-    font-size: 16px;
-    font-weight: bold;
-    overflow: hidden;
-    margin-top: 5px;
-    text-overflow: ellipsis;
-    white-space: nowrap;
-    display: block;
-  }
-  .cat-likes{
 
-  }
-  &-cat-age{
-    color: #748290;
-    font-size: 12px;
-    display: block;
-  }
-  .cat-image{
-    border-radius: 50%;
-    height: auto;
-    max-width: 100%;
-  }
 
   @media (min-width: 768px) {
     .header {

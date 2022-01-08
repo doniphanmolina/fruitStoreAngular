@@ -29,7 +29,6 @@ export class FrontstoreComponent implements OnInit, OnDestroy {
   errorMessage: string;
   showErrorMessage: boolean = false;
 
-  catsSubscription: Subscription;
   private readonly destroy$: Subject<void> = new Subject();
 
   @Input('containers') set _containersRef(containers: any) {
@@ -38,10 +37,6 @@ export class FrontstoreComponent implements OnInit, OnDestroy {
     for (let i = 0; i < this.containers.length; i++) {
       this.totalFruitsAMount += this.containers[i].fruits.length;
     }
-
-    // this.containers = _.clone(containers.slice().sort((a: Container,b: Container)=>{
-    //   return b.stack - a.stack;
-    // }));
     console.log(this.containers)
   }
 
@@ -50,8 +45,6 @@ export class FrontstoreComponent implements OnInit, OnDestroy {
               private fruitStoreService: FruitstoreService,
               private fruitstoreStoreService: FruitstoreStoreService,
               public router: Router,
-              private store: Store<{frontStore: { containers: Container[] }}>,
-              private catsStoreService: FruitstoreStoreService,
               public dialog: MatDialog) { }
 
   ngOnInit(): void {
@@ -140,7 +133,6 @@ export class FrontstoreComponent implements OnInit, OnDestroy {
   }
 
   ngOnDestroy(): void {
-    this.catsSubscription.unsubscribe();
     this.destroy$.next();
     this.destroy$.complete();
   }
