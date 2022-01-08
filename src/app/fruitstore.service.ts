@@ -21,7 +21,6 @@ export class FruitstoreService {
   }
 
   initData(initialData?: any): void {
-    console.log('initialData',initialData,InitialContainers)
     let initialContainersdata = initialData ? initialData.containers : InitialContainers.fruitsStore.frontStore.containers;
     this.fruitstoreStoreService.setContainers(initialContainersdata);
   }

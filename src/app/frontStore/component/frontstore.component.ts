@@ -33,11 +33,9 @@ export class FrontstoreComponent implements OnInit, OnDestroy {
 
   @Input('containers') set _containersRef(containers: any) {
     this.containers = _.cloneDeep(containers);
-    this.totalFruitsAMount = 0;
     for (let i = 0; i < this.containers.length; i++) {
       this.totalFruitsAMount += this.containers[i].fruits.length;
     }
-    console.log(this.containers)
   }
 
 
@@ -70,7 +68,6 @@ export class FrontstoreComponent implements OnInit, OnDestroy {
   }
 
   addToCart() {
-    console.log('this.totalFruitsAMount',this.totalFruitsAMount)
     if(this.cartForm.get('fruitQuantity').value > this.totalFruitsAMount){
       this.errorMessage = 'There\'s not enough fruits in the store to sell that quantity';
       this.showErrorMessage = true;
@@ -86,16 +83,13 @@ export class FrontstoreComponent implements OnInit, OnDestroy {
     for (let i = (this.containers.length - 1); i >= 0; i--) {
           if(this.containers[i].fruits.length > 0) {
             if(this.cartForm.get('fruitQuantity').value <= this.containers[i].fruits.length) {
-              console.log('price',this.containers[i].fruits[0].price)
               this.subtractFruitQuantity(Number(this.cartForm.get('fruitQuantity').value), this.containers[i].fruits);
               this.resetForm('');
             } else {
               let diff = this.cartForm.get('fruitQuantity').value - this.containers[i].fruits.length;
               if(this.cartForm.get('fruitQuantity').value >= this.containers[i].capacity){
                 this.subtractFruitQuantity(this.containers[i].capacity, this.containers[i].fruits);
-                console.log('greater than-----', diff)
               } else {
-                console.log('++++++++++++not',diff)
                 this.subtractFruitQuantity(this.containers[i].fruits.length , this.containers[i].fruits);
               }
               this.resetForm(diff);
@@ -119,6 +113,7 @@ export class FrontstoreComponent implements OnInit, OnDestroy {
   }
 
   openAdminDialog() {
+    this.refresh();
     this.dialog.open(AdminDialogComponent, {
       height: '450px',
       width: '470px',
@@ -126,10 +121,10 @@ export class FrontstoreComponent implements OnInit, OnDestroy {
   }
 
   refresh(){
-    console.log('refresh');
-    this.resetForm('');
+    this.totalPrice = 0;
     this.fruitsQuantity = 0;
     this.fruitStoreService.initData();
+    this.resetForm('');
   }
 
   ngOnDestroy(): void {

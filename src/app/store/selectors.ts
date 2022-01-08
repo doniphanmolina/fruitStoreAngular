@@ -7,7 +7,6 @@ export const selectFruitStore = (state: AppState) => state;
 export const selectContainers = createSelector(
   selectFruitStore,
   (state: any) => {
-      console.log(state)
     const containers = state.fruitsStore.frontStore.containers;
     return containers;
   }
