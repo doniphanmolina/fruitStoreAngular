@@ -16,7 +16,7 @@ import { HomeComponent } from './home/home.component';
 import { AngularFirestore } from "@angular/fire/compat/firestore";
 import { AngularFireModule } from "@angular/fire/compat";
 import { FruitstoreService } from "./fruitstore.service";
-import { AdminDialogComponent } from './add-cat-dialog/admin-dialog.component';
+import { AdminDialogComponent } from './admin-dialog/admin-dialog.component';
 import { MaterialModule } from "./material.module";
 import { FormsModule, ReactiveFormsModule} from "@angular/forms";
 import { StoreModule } from "@ngrx/store";

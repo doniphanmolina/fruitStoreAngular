@@ -3,7 +3,7 @@ import { Container, Fruit} from "../../models";
 import { AngularFirestore } from "@angular/fire/compat/firestore";
 import { FruitstoreService } from "../../fruitstore.service";
 import { MatDialog } from "@angular/material/dialog";
-import { AdminDialogComponent } from "../../add-cat-dialog/admin-dialog.component";
+import { AdminDialogComponent } from "../../admin-dialog/admin-dialog.component";
 import { Subscription } from "rxjs";
 import { Router } from "@angular/router";
 import { Store } from "@ngrx/store";
