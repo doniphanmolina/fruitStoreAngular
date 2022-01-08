@@ -1,8 +1,8 @@
-# CatsManagement
-A cat-lady cats management. 
-Do not put any single kitty in danger.
+# Fruit Store. Oranges and Apples
+We sell only oranges. And apples only if we get out of oranges.
+We love oranges
 
-LIVE DEMO: http://cats.doniphanmolina.com 
+LIVE DEMO: http://oranges.doniphanmolina.com 
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 13.1.2.
 # Local running
@@ -15,4 +15,4 @@ This project was generated with [Angular CLI](https://github.com/angular/angular
 	6. Download the Project and navigate to the root
 	7. $ npm install
 	8. $ ng serve --open 
-	9. Also, there's a live DEMO at http://cats.doniphanmolina.com 
+	9. Also, there's a live DEMO at http://oranges.doniphanmolina.com 
